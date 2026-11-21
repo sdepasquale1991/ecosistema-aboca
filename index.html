@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Aboca</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header class="header">
+  <a href="#" class="logo-link">
+    <img src="aboca-logo.png" alt="Aboca Logo" class="logo">
+  </a>
+
+  <!-- Pulsante Hamburger visibile solo su mobile -->
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Apri menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="menu" id="navMenu">
+    <ul>
+      <li><a href="#vision" onclick="closeMenu()">La Vision</a></li>
+      <li><a href="#dati" onclick="closeMenu()">I Dati</a></li>
+      <li><a href="#ambiente" onclick="closeMenu()">L'Impegno</a></li>
+      <li><a href="#finalita" onclick="closeMenu()">Le Finalità</a></li>
+      <li class="mobile-only-cta"><a href="#download" onclick="closeMenu()">Scarica Relazione</a></li>
+    </ul>
+  </nav>
+
+  <a href="#download" class="button desktop-cta">Scarica Relazione</a>
+</header>
+
+
+
+  <!-- Hero Section -->
+
+  <section class="hero">
+    <video autoplay muted loop playsinline poster="hero-image.png" class="hero__video">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero__text">
+      <h1>Coltiviamo la natura, proteggiamo la vita.</h1>
+      <br>
+      <p><strong>I nostri risultati al servizio delle persone e del pianeta.</strong> <br>Scopri come da quasi cinquant'anni uniamo ricerca scientifica, agricoltura biologica e modelli produttivi circolari per generare valore condiviso nel rispetto degli ecosistemi.</p>
+      <br>
+      <a href="#dati" class="button">Esplora i dati chiave</a>
+    </div>
+  </section>
+
+
+  <!-- Section 1: La Vision -->
+
+  <section id="vision" class="vision">
+    <div class="container one-health-grid">
+    
+      <div class="one-health-text">
+        <h2 class="section-title">Un unico sistema vivente: l'approccio One&nbsp;Health</h2>
+        <p>In Aboca, crediamo che il benessere delle persone sia indissolubilmente legato alla salute degli animali e dell'ambiente. Dal 1978 sviluppiamo soluzioni terapeutiche 100% naturali e biodegradabili, escludendo qualsiasi sostanza artificiale lungo tutto il ciclo di vita del prodotto.</p>
+        <p>Essere una <strong>Società Benefit</strong> significa formalizzare nel nostro Statuto l'impegno a generare un impatto positivo misurabile sulla società e sulla natura.</p>
+        
+        <div class="quote-box">
+          <p>"Prendersi cura della natura significa, prima di tutto, prendersi cura delle persone e delle generazioni che verranno."</p>
+          <strong>Massimo Mercati</strong> - Amministratore Delegato e Responsabile di Impatto
+        </div>
+      </div>
+
+      <div class="filiera-grid">
+        <div class="filiera-card">
+          <div class="filiera-header">
+            <h3>1. Ricerchiamo</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+          </div>
+          <p>Applichiamo i criteri della <i>Evidence-Based Medicine</i> e della metabolomica allo studio dei complessi molecolari naturali.</p>
+        </div>
+
+        <div class="filiera-card">
+          <div class="filiera-header">
+            <h3>2. Coltiviamo</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+            </div>
+          </div>
+          <p>Gestiamo oltre 1.800 ettari in agricoltura biologica tra Toscana e Umbria, tutelando la fertilità del suolo e gli impollinatori.</p>
+        </div>
+
+        <div class="filiera-card">
+          <div class="filiera-header">
+            <h3>3. Produciamo</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+          </div>
+          <p>Trasformiamo le materie prime in stabilimenti all'avanguardia, preservando l'integrità dei fitocomplessi senza solventi chimici.</p>
+        </div>
+
+        <div class="filiera-card">
+          <div class="filiera-header">
+            <h3>4. Distribuiamo</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+          </div>
+          <p>Collaboriamo in modo selettivo con medici e farmacisti, promuendo formazione continua e cultura della salute.</p>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+
+  <!-- Section 2: I Dati -->
+
+  <section id="dati" class="data">
+    <div class="container">
+      <h2 class="section-title">L'impatto di Aboca in numeri</h2>
+      <p class="section-subtitle">I principali indicatori economici, ambientali e sociali aggiornati al 31 dicembre 2025.</p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-number">124,2</div>
+          <div class="kpi-label">Punteggio B Corp</div>
+          <div class="kpi-desc">Ben oltre la soglia di qualifica (80 pt) e la media globale (50,9).</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number">1.800+</div>
+          <div class="kpi-label">Ettari gestiti</div>
+          <div class="kpi-desc">Coltivati in agricoltura biologica e tutela della biodiversità.</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number">100%</div>
+          <div class="kpi-label">Formule naturali</div>
+          <div class="kpi-desc">Biodegradabili e senza sostanze di sintesi in 66 linee di prodotto.</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number">318 M€</div>
+          <div class="kpi-label">Ricavi netti consolidati</div>
+          <div class="kpi-desc">Crescita economica solida reinvestita in ricerca e territorio.</div>
+        </div>
+
+        <!-- Schede nascoste su mobile di default -->
+        <div class="kpi-card kpi-extra">
+          <div class="kpi-number">1.814</div>
+          <div class="kpi-label">Popolazione aziendale</div>
+          <div class="kpi-desc">1.501 in Italia e 313 all'estero, con il 48% di presenza femminile.</div>
+        </div>
+        <div class="kpi-card kpi-extra">
+          <div class="kpi-number">152</div>
+          <div class="kpi-label">Progetti di R&amp;S</div>
+          <div class="kpi-desc">Portati avanti da 70 ricercatori e oltre 80 collaborazioni scientifiche.</div>
+        </div>
+        <div class="kpi-card kpi-extra">
+          <div class="kpi-number">46.400+</div>
+          <div class="kpi-label">Professionisti formati</div>
+          <div class="kpi-desc">Medici e farmacisti coinvolti nei programmi di aggiornamento.</div>
+        </div>
+        <div class="kpi-card kpi-extra">
+          <div class="kpi-number">290.500+</div>
+          <div class="kpi-label">Persone raggiunte</div>
+          <div class="kpi-desc">Partecipanti agli eventi culturali, Aboca Edizioni e Museo.</div>
+        </div>
+      </div>
+      <button id="btnKpi" onclick="toggleExtraKpis()" class="btn btn-verde btn-mostra-kpi">Mostra tutto (+)</button>
+    </div>
+  </section>
+
+
+  <!-- Section 3: L'Impegno -->
+
+  <section id="ambiente" class="ambiente">
+    <div class="container">
+      <h2 class="section-title">Rigenerare gli ecosistemi, misurare i progressi</h2>
+      <p class="section-subtitle">Dalle energie rinnovabili alla tutela della biodiversità: azioni concrete per una transizione ecologica misurabile.</p>
+
+      <div class="tabs-buttons">
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')">1. Agrivoltaico ed Energia</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')">2. Biodiversità e Suolo</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab3')">3. Obiettivi ONU (SDGs)</button>
+      </div>
+
+
+      <div id="tab1" class="tab-content active">
+        <h3>Energia pulita che convive con l'agricoltura</h3>
+        <p>Nel 2025 abbiamo avviato uno dei più importanti progetti energetici della nostra storia: un grande impianto <strong>agrivoltaico integrato</strong> nello stabilimento di Pistrino, in Umbria.</p>
+        <p>Grazie a strutture sopraelevate, la produzione di energia solare affianca la coltivazione di specie vegetali compatibili, ottimizzando l'uso del suolo e abbattendo le emissioni climalteranti.</p>
+      </div>
+
+      <div id="tab2" class="tab-content">
+        <h3>La natura come laboratorio di equilibrio</h3>
+        <p>Monitoriamo costantemente la salute dei nostri terreni attraverso protocolli scientifici rigorosi (Prassi UNI/PdR 179:2025), misurando l'abbondanza delle specie, la presenza di impollinatori e la qualità biologica dei corsi d'acqua.</p>
+        <p>A livello internazionale, sosteniamo progetti di riforestazione e recupero ambientale in Brasile (progetto Acerola), Argentina e India.</p>
+      </div>
+
+      <div id="tab3" class="tab-content">
+        <h3>Eccellenza riconosciuta sugli Obiettivi delle Nazioni Unite</h3>
+        <p>Misurati tramite l'<em>SDGs Action Manager</em>, superiamo ampiamente il benchmark delle aziende di pari dimensioni su tre obiettivi strategici:</p>
+
+        <div class="sdg-bar-container">
+          <div class="sdg-item">
+            <div class="sdg-header">
+              <span>SDG 3 - Salute e Benessere</span>
+              <span>Benchmark globale: 27%</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 77%;">Aboca: 77%</div>
+            </div>
+          </div>
+
+          <div class="sdg-item">
+            <div class="sdg-header">
+              <span>SDG 12 - Consumo e Produzione Responsabili</span>
+              <span>Benchmark globale: 23%</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 68%;">Aboca: 68%</div>
+            </div>
+          </div>
+
+          <div class="sdg-item">
+            <div class="sdg-header">
+              <span>SDG 15 - Vita sulla Terra</span>
+              <span>Benchmark globale: 14%</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 58%;">Aboca: 58%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 4: Le Finalità -->
+
+  <section id="finalita" class="finalita">
+    <div class="container">
+      <h2 class="section-title">I nostri impegni statutari per il bene comune</h2>
+      <p class="section-subtitle">Sei aree di azione concrete per bilanciare gli obiettivi economici con la responsabilità sociale e ambientale.</p>
+
+      <div class="finalita-grid">
+        <div class="finalita-card">
+          <div class="finalita-header">
+            <h3>1. Salute e Benessere</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+          </div>
+          <p>Promuoviamo la salute attraverso prodotti naturali validati da studi clinici e da oltre 19.000 questionari di Real World Evidence raccolti nel 2025.</p>
+        </div>
+
+        <div class="finalita-card">
+          <div class="finalita-header">
+            <h3>2. Ricerca e Sviluppo</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 9h4"/><path d="M10 3v6l-4 11a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1l-4-11V3"/></svg>
+            </div>
+          </div>
+          <p>Investiamo nell'innovazione dei complessi molecolari naturali e nell'adeguamento ai più severi standard europei per i dispositivi medici (MDR 2017/745).</p>
+        </div>
+
+        <div class="finalita-card">
+          <div class="finalita-header">
+            <h3>3. Nuovi Modelli di Filiera</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </div>
+          </div>
+          <p>Costruiamo relazioni trasparenti con fornitori e partner commerciali, avviando percorsi condivisi di valutazione ESG tramite EcoVadis.</p>
+        </div>
+
+        <div class="finalita-card">
+          <div class="finalita-header">
+            <h3>4. Pratiche Ambientali</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </div>
+          </div>
+          <p>Diffondiamo l'agricoltura biologica, il packaging certificato FSC/PEFC e lavoriamo a un piano strutturato di decarbonizzazione lungo tutta la filiera.</p>
+        </div>
+
+        <div class="finalita-card">
+          <div class="finalita-header">
+            <h3>5. Sviluppo delle Comunità</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+          </div>
+          <p>Generiamo cultura e consapevolezza attraverso le pubblicazioni di Aboca Edizioni, i percorsi educativi di Aboca Museum e gli eventi sul territorio.</p>
+        </div>
+
+        <div class="finalita-card">
+          <div class="finalita-header">
+            <h3>6. Valore alle Persone</h3>
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+          </div>
+          <p>Tuteliamo la sicurezza e l'inclusione nei luoghi di lavoro, investendo nella formazione professionale e nel sostegno alla genitorialità.</p>
+        </div>
+      </div>
+
+      <div class="certificazioni-box">
+        Certificazioni e Rating 2025: B Corp Certified (124,2 pt) • UNI EN ISO 45001 (Sicurezza) • UNI/PdR 125:2022 (Parità di Genere) • EcoVadis Committed • ISO 14001 (Ambiente)
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 5: Box Download -->
+
+  <section id="download" class="download">
+    <div class="container">
+      <div class="download-banner">
+        <div class="download-text">
+          <h2>Approfondisci tutti i dati della Relazione&nbsp2025</h2>
+          <p>Consulta il documento integrale con la nota metodologica, il dettaglio degli indicatori di performance (KPI) e gli obiettivi strategici fissati per il 2026.</p>
+          <p class="download-specs">Formato PDF • 97 pagine • Edizione Italiana (Aggiornata al 31/12/2025)</p>
+        </div>
+        <div>
+          <button onclick="downloadReport()" class="btn btn-bianco">Scarica la Relazione 2025</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer-disclaimer">
+      <strong>Nota:</strong> questo sito è stato realizzato esclusivamente a scopo didattico e dimostrativo. Tutti i testi, i dati e i marchi citati appartengono ai rispettivi proprietari e non hanno alcuna finalità commerciale.
+    </p>
+    <p class="footer-link">
+      Per informazioni e comunicazioni ufficiali, si rimanda al <a href="https://aboca.com" target="_blank" rel="noopener noreferrer">sito ufficiale di Aboca</a>.
+    </p>
+  </div>
+</footer>
+
+
+<button id="backToTop" onclick="scrollToTop()" title="Torna su">↑</button>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
