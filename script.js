@@ -77,3 +77,22 @@ function scrollToTop() {
     behavior: 'smooth'
   });
 }
+
+// 6. Mobile Hamburger Menu toggle
+function toggleMenu() {
+  const menu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburgerBtn');
+  if (menu && hamburger) {
+    menu.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  }
+}
+
+function closeMenu() {
+  const menu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburgerBtn');
+  if (menu && hamburger) {
+    menu.classList.remove('open');
+    hamburger.classList.remove('active');
+  }
+}

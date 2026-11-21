@@ -32,9 +32,24 @@ body{background: #acc2a3;}
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.logo {
+.logo-link {
   margin-right: auto;
+  display: inline-block;
+  outline: none;
+}
+
+.logo-link:focus,
+.logo-link:active {
+  outline: none;
+}
+
+.logo-link:hover .logo {
+  opacity: 0.85;
+}
+
+.logo {
   width: 120px;
+  display: block;
   transition: width 0.3s ease;
 }
 
@@ -50,6 +65,44 @@ body{background: #acc2a3;}
   text-decoration: underline;
   text-underline-offset: 6px; /* Distanzia leggermente la linea dal testo per renderla più elegante */
   text-decoration-thickness: 2px; /* Rende la linea un po' più spessa e visibile */
+}
+
+/* Hamburger nascosto su desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: antiquewhite;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animazione delle 3 linee in una "X" quando aperto */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+.menu li.mobile-only-cta {
+  display: none;
 }
 
 
@@ -199,17 +252,6 @@ body{background: #acc2a3;}
   align-items: center;
   gap: 10px;
   margin-bottom: 12px;
-}
-
-.filiera-header span {
-  display: inline-block;
-  background-color: #2C3E30;
-  color: antiquewhite;
-  font-weight: bold;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin-bottom: 0;
 }
 
 .filiera-card h3 {
@@ -589,6 +631,53 @@ body{background: #acc2a3;}
   transform: translateY(-2px);
 }
 
+
+/* ! Footer */
+
+.footer {
+  background-color: #2C3E30;
+  color: #f4efe6;
+  padding: 35px 10%;
+  text-align: center;
+  border-top: 1px solid rgba(250, 235, 215, 0.15);
+}
+
+.footer .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-disclaimer {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #d8e2d3;
+}
+
+.footer-disclaimer strong {
+  color: antiquewhite;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  color: antiquewhite;
+}
+
+.footer-link a {
+  color: #acc2a3;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.footer-link a:hover {
+  color: antiquewhite;
+}
+
+
 /* ! Responsive Mobile per i KPI */
 @media (max-width: 768px) {
   .kpi-grid {
@@ -641,3 +730,215 @@ body{background: #acc2a3;}
   transform: translateY(-3px);
 }
 
+
+/* ! Media Queries: Tablet (fino a 992px) */
+@media (max-width: 992px) {
+  .header,
+  .header.scrolled {
+    padding: 15px 5%;
+  }
+
+  .menu a {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero__text {
+    margin-left: 5%;
+    max-width: 600px;
+  }
+
+  /* La Vision passa da 2 colonne a 1 colonna impilata */
+  .one-health-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 50px 5%;
+  }
+
+  /* I Dati passano da 4 colonne a 2 colonne */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Le Finalità passano da 3 colonne a 2 colonne */
+  .finalita-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .data .container,
+  .ambiente .container,
+  .finalita .container {
+    padding: 50px 5%;
+  }
+
+  .download .container {
+    padding: 40px 5% 60px 5%;
+  }
+
+  .download-banner {
+    padding: 35px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ! Media Queries: Smartphone (fino a 768px) */
+@media (max-width: 768px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.35rem; }
+
+  /* Header compatto con menu orizzontale scorrevole o centrato */
+  .header,
+  .header.scrolled {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    width: 95px;
+  }
+
+  .header.scrolled .logo {
+    width: 85px;
+  }
+
+  /* Nasconde il bottone desktop e mostra l'hamburger */
+  .desktop-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu a tendina con effetto vetro sfocato */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: rgba(44, 62, 48, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /* Necessario per Safari e iOS */
+    border-left: 1px solid rgba(250, 235, 215, 0.18);
+    padding: 90px 30px 30px 30px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.25);
+    transition: right 0.35s ease;
+    z-index: 105;
+  }
+
+  .menu.open {
+    right: 0;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu li {
+    display: block;
+  }
+
+  .menu a {
+    font-size: 1.15rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(250, 235, 215, 0.15);
+  }
+
+  .menu li.mobile-only-cta {
+    display: block;
+    margin-top: 15px;
+  }
+
+
+  .mobile-only-cta a {
+    background-color: antiquewhite;
+    color: #2C3E30;
+    text-align: center;
+    border-radius: 50px;
+    padding: 12px 20px;
+    border-bottom: none;
+  }
+
+
+  /* Hero adattata allo schermo verticale */
+  .hero {
+    height: auto;
+    min-height: 620px;
+    padding: 155px 5% 60px 5%;
+  }
+
+  .hero__text {
+    margin-left: 0;
+  }
+
+  /* Griglie a 1 sola colonna */
+  .filiera-grid,
+  .kpi-grid,
+  .finalita-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Schede KPI extra nascoste di default su mobile */
+  .kpi-extra {
+    display: none;
+  }
+
+  .btn-mostra-kpi {
+    display: block;
+    font-family: 'Lora', Arial, Helvetica, sans-serif;
+    background-color: #2C3E30;
+    color: antiquewhite;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 26px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  /* Tab e riquadro sezione L'Impegno */
+  .tabs-buttons {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tab-content {
+    padding: 25px 20px;
+  }
+
+  .sdg-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* Banner finale Download */
+  .download-banner {
+    padding: 30px 20px;
+  }
+
+  .btn-bianco {
+    width: 100%;
+    white-space: normal;
+  }
+
+
+  .footer {
+    padding: 30px 5%;
+  }
+
+  #backToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
